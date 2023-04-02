@@ -17,7 +17,7 @@ public class TestCPUFixedPoint {
         double end;
         int mops;
         bench.initialise(10000000);
-        bench.warmUp();
+        //bench.warmUp();
 
         timer.start();
         bench.run(1);
