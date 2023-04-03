@@ -64,7 +64,7 @@ public class CPURecursionLoopUnrolling implements IBenchmark {
 
             return uSum + recursiveUnrolled(localSize, unrollLevel, size, localCounter);
         } catch (StackOverflowError | NoClassDefFoundError e) {
-            this.uStart = localStart;
+            this.uStart = uSum;
             this.uCounter = localCounter;
             return uSum;
         }
