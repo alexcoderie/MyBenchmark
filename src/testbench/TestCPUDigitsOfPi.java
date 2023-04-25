@@ -26,7 +26,7 @@ public class TestCPUDigitsOfPi {
 
         // 100 digits
         bench.initialise(100);
-        bench.warmUp();
+        //bench.warmUp();
 
         timer.start();
         bench.run();
@@ -34,7 +34,7 @@ public class TestCPUDigitsOfPi {
 
         // 1000 digits
         bench.initialise(1000);
-        bench.warmUp();
+        //bench.warmUp();
 
         timer.start();
         bench.run();
@@ -42,7 +42,7 @@ public class TestCPUDigitsOfPi {
 
         // 10 000 digits
         bench.initialise(10000);
-        bench.warmUp();
+        //bench.warmUp();
 
         timer.start();
         bench.run();
@@ -50,7 +50,7 @@ public class TestCPUDigitsOfPi {
 
         // 50 000 digits
         bench.initialise(50000);
-        bench.warmUp();
+        //bench.warmUp();
 
         timer.start();
         bench.run();
@@ -58,7 +58,7 @@ public class TestCPUDigitsOfPi {
 
         // 100 000 digits
         bench.initialise(100000);
-        bench.warmUp();
+        //bench.warmUp();
 
         timer.start();
         bench.run();
