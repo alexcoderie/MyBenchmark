@@ -17,7 +17,7 @@ public class TestCPUThreadedHashing {
         TimeUnit timeUnit = TimeUnit.milliseconds;
 
         timer.start();
-        bench.run(10, 8,132368363);
+        bench.run(10, 8,31834033);
         System.out.println(((CPUThreadedHashing) bench).getResult());
         log.writeTime("Finished in: ", timer.stop(), timeUnit);
         // 1018655712 is "break"
