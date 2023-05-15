@@ -13,9 +13,9 @@ import timing.Timer;
 public class FileWriter {
 
     private static final int MIN_BUFFER_SIZE = 1024 * 1; // KB
-    private static final int MAX_BUFFER_SIZE = 1024 * 1024 * 32; // MB
+    private static final int MAX_BUFFER_SIZE = 1024 * 1024 * 64; // MB
     private static final long MIN_FILE_SIZE = 1024 * 1024 * 1; // MB
-    private static final long MAX_FILE_SIZE = 1024 * 1024 * 512; // MB
+    private static final long MAX_FILE_SIZE = 1024 * 1024 * 1000; // MB
     private Timer timer = new Timer();
     private Random rand = new Random();
     private double benchScore;
@@ -50,7 +50,7 @@ public class FileWriter {
             fileName = filePrefix + fileIndex + fileSuffix;
             writeFile(fileName, currentBufferSize, fileSize, clean);
             // update buffer size
-			currentBufferSize *= 2;
+			currentBufferSize *= 4;
             fileIndex++;
         }
 
@@ -88,7 +88,7 @@ public class FileWriter {
 			filename = filePrefix + fileIndex + fileSuffix;
             writeFile(filename, bufferSize, currentFileSize, clean);
             // update fileSize instead of bufferSize
-            currentFileSize *= 2;
+            currentFileSize *= 10;
             fileIndex++;
         }
 
